@@ -68,7 +68,3 @@ mkdir -p /opt/app-root/data
 # Fixup permissions on directories and files.
 
 fix-permissions /opt/app-root
-
-# hack - postgresql client
-
-dnf install postgresql-devel && dnf clean all
