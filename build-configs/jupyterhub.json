@@ -39,7 +39,7 @@
                     "type": "Git",
                     "git": {
                         "uri": "https://github.com/eformat/jupyterhub-quickstart.git",
-                        "ref": "main"
+                        "ref": "master"
                     }
                 },
                 "strategy": {
