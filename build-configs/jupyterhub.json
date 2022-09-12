@@ -38,8 +38,8 @@
                 "source": {
                     "type": "Git",
                     "git": {
-                        "uri": "https://github.com/jupyter-on-openshift/jupyterhub-quickstart.git",
-                        "ref": "3.4.0"
+                        "uri": "https://github.com/eformat/jupyterhub-quickstart.git",
+                        "ref": "main"
                     }
                 },
                 "strategy": {
@@ -47,7 +47,7 @@
                     "sourceStrategy": {
                         "from": {
                             "kind": "ImageStreamTag",
-                            "name": "python:3.6",
+                            "name": "python:3.8-ubi8",
                             "namespace": "openshift"
                         }
                     }
