@@ -1,6 +1,6 @@
 kubernetes==24.2.0
 jupyterhub==3.0.0
-git+https://github.com/jupyterhub/oauthenticator/oauthenticator.git@15.1.0
+git+https://github.com/jupyterhub/oauthenticator.git@15.1.0
 jupyterhub-kubespawner==0.8
 git+https://github.com/jupyterhub/wrapspawner.git@83781e1fc6085f8939b6fea6304d8d0f024b0884
 jupyterhub-tmpauthenticator==0.6
