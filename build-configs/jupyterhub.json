@@ -47,8 +47,7 @@
                     "sourceStrategy": {
                         "from": {
                             "kind": "ImageStreamTag",
-                            "name": "jupyter-base:latest",
-                            "namespace": "openshift"
+                            "name": "jupyter-base:latest"
                         }
                     }
                 },
