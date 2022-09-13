@@ -15,12 +15,6 @@ RUN rm -rf /tmp/src/.git* && \
     chmod -R g+w /tmp/src && \
     mv /tmp/src/.s2i/bin /tmp/scripts
 
-# postgres client
-ADD postgresql-jdbc-42.3.6-1.rhel8.noarch.rpm /tmp
-RUN yum install -y /tmp/postgresql-jdbc-42.3.6-1.rhel8.noarch.rpm postgresql-devel && \
-    yum clean all && \
-    rm -rf /var/cache/yum
-
 USER 1001
 
 ENV NPM_CONFIG_PREFIX=/opt/app-root \
