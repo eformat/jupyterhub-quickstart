@@ -22,4 +22,10 @@ ENV NPM_CONFIG_PREFIX=/opt/app-root \
 
 RUN /tmp/scripts/assemble
 
+# postgres client
+ADD postgresql-jdbc-42.3.6-1.rhel8.noarch.rpm /tmp
+RUN yum install /tmp/postgresql-jdbc-42.3.6-1.rhel8.noarch.rpm postgresql-devel && \
+    yum clean all && \
+    rm -rf /var/cache/yum
+
 CMD [ "/opt/app-root/builder/run" ]

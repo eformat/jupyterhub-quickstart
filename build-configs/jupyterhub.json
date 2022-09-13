@@ -47,7 +47,8 @@
                     "sourceStrategy": {
                         "from": {
                             "kind": "ImageStreamTag",
-                            "name": "jupyter-base:latest"
+                            "name": "python:3.8-ubi8",
+                            "namespace": "openshift"
                         }
                     }
                 },
