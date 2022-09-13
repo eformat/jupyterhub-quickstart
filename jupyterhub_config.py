@@ -2,8 +2,10 @@ import os
 
 import wrapt
 
-from kubernetes.client.configuration import Configuration
-from kubernetes.config.incluster_config import load_incluster_config
+#from kubernetes.client.configuration import Configuration
+#from kubernetes.config.incluster_config import load_incluster_config
+import kubernetes
+
 from kubernetes.client.api_client import ApiClient
 from kubernetes.client.rest import ApiException
 from openshift.dynamic import DynamicClient
@@ -43,15 +45,15 @@ def convert_size_to_bytes(size):
 # Python openshift/kubernetes clients will fail. We also disable any
 # warnings from urllib3 to get rid of the noise in the logs this creates.
 
-load_incluster_config()
-
 import urllib3
 urllib3.disable_warnings()
 instance = Configuration()
 instance.verify_ssl = False
 Configuration.set_default(instance)
 
-api_client = DynamicClient(ApiClient())
+kubernetes.config.load_incluster_config()
+k8s_client = kubernetes.client.ApiClient()
+api_client = DynamicClient(k8s_client)
 
 image_stream_resource = api_client.resources.get(
      api_version='image.openshift.io/v1', kind='ImageStream')
