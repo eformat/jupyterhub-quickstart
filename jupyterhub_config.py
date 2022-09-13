@@ -2,8 +2,8 @@ import os
 
 import wrapt
 
-#from kubernetes.client.configuration import Configuration
-#from kubernetes.config.incluster_config import load_incluster_config
+from kubernetes.client.configuration import Configuration
+from kubernetes.config.incluster_config import load_incluster_config
 import kubernetes
 
 from kubernetes.client.api_client import ApiClient
